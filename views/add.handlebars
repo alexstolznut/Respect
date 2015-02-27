@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My Goals</title>
+		<!-- Import CSS -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+
+		<style>
+			.block-ltg {
+				border: 5px solid black;
+				border-radius: 15px;
+				width: 80%;
+				font-size: 80%;
+				padding: 10px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.block-ltg:hover {
+				background-color: black;
+				color: white;
+			}
+
+			.div-goal-add {
+				border: 5px solid white;
+				color: white;
+			}
+
+			.div-goal-add:hover {
+				border: 5px solid black;
+				/*color: black;*/
+			}
+
+			.input-goal-add, .input-goal-add:hover {
+				background-color: white;
+				color: black;
+			}
+
+			.input-goal-add {
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.button-add-wgs {
+				
+			}
+
+			#header {
+				text-align: center;
+				background-color:#43f2b6;
+				top:0;
+				width:100%;
+				-webkit-box-shadow: 0px 0px 4px 0px #000000;
+				-moz-box-shadow: 0px 0px 4px 0px #000000;
+				box-shadow: 0px 0px 4px 0px #000000;
+				color:white;
+				z-index:3333;
+				position:fixed;
+				left:0px;
+			}
+			#header * {
+				margin-right: 10px;
+			}
+			#header table {
+				width: 100%;
+			}
+
+			#header #cell-header {
+				width: 80%;
+				font-size: 50%;
+				color: white;
+			}
+
+			#header img {
+				width: 20px;
+			}
+
+			#header p {
+				margin-top: 2px;
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-body-page">
+			<div class="header-page">
+				<table>
+					<tr>
+						<td class="cell-header"><h1>GOALS</h1></td>
+						<td><a href="/"><p>Logout</p></a></td>
+						<td><a href="settings"><img class="icon-settings" src="images/settings.png" alt="settings"></a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="container-content-main">
+				<h1>Your Long-Term or Weekly Goal has been added!</h1>
+				<a href="/goals"><button>Back to Goals</button></a>
+			</div>
+
+		<script src="js\jquery-1.11.0.js"></script>
+		<script src="js\bootstrap.js"></script>
+		<script src="js\goals.js"></script>
+	</body>
+</html>

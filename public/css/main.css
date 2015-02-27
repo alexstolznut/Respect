@@ -1,0 +1,169 @@
+body {
+	margin:0px;
+	background-color:#F2F2F2;
+	font-family: 'Raleway', sans-serif;
+}
+
+.header-page {
+	border-bottom: 1px solid #B3B3B3;
+	background-color: #FFD95F;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left:2.5%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+/* Restyle Bootstrap glyphicons and header */
+.header-page a, .header-page h1 {
+	color: #3E116D;
+	font-size: 25px;
+}
+
+.header-page table {
+	width:100%;
+}
+
+.cell-header {
+	width: 80%;
+}
+.cell-header h1 {
+	/*color: #428bca;*/
+	display:inline;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-weight:700;
+	font-family: 'Raleway', sans-serif !important;
+}
+
+.icon-settings {
+	 width: 20px;
+}
+
+.container-content-main {
+	margin-top: 55px;
+	margin-bottom: 50px;
+	overflow-y:hidden;
+}
+
+#navbar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-collapse: collapse;
+}
+#navbar button {
+	/*width: 100%;*/
+	height:50px;
+	margin-left:0px;
+	margin-right: 0px;
+	font-size: 180%;
+	font-weight: 400;
+	/*background-color:#f8f8f8;*/
+	color: white;
+	border-collapse: 100%;
+	border:0px;
+	background-color:white;
+	border-top: 1px solid #B3B3B3;
+	border-left: 1px solid #B3B3B3;
+}
+
+
+
+#linebreak {
+	position: relative;
+	height: 50px;
+}
+
+
+/*respect entry testing*/
+.respectentry-container {
+	background-color: #eef3f6;
+	width:100% auto;
+	clear:both;
+	border-bottom:1px solid #ddd;
+	/*height:40px;*/
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:2.5%;
+	padding-right:10px;
+	overflow-y:hidden;
+
+
+
+
+}
+
+.respecticon {
+	background-color: #eef3f6;
+	float:left;
+	height:100%;
+	margin-right:10px;
+
+}
+
+.respectentry-top {
+	background-color: #eef3f6;
+	display:inline;
+	float:right;
+	margin-left:5px;
+
+
+}
+
+.respectentry-bottom {
+	background-color: #eef3f6;
+	display:inline;
+	top:50%;
+
+}
+
+.respectentry-bottom p {
+	display:inline;
+}
+
+.delete {
+	float:right;
+	display:inline;
+}
+
+#goaldiv {
+	width:80%;
+	margin:auto;
+}
+
+#accomplishments-page{
+width: 100%;
+
+}
+#respects-page{
+	width: 100%;
+
+}
+#goalList-page{
+	width: 100%;
+
+}
+
+#accomplishmentsicon{
+}
+
+#accomplishmentsicon img{
+	height:40px;
+	width:40px;
+	margin:auto;
+}
+
+#goalsicon img{
+	height:40px;
+	width:40px;
+}
+
+#respectsicon img{
+	height:40px;
+	width:40px;
+	margin:auto;
+}

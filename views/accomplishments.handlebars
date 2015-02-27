@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Accomplishments Stream</title>
+
+		<!-- Import CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,400' rel='stylesheet' type='text/css'>
+
+		<style>
+			/* Center all content on the page */
+			.block-stream, .block-stream * {
+				text-align: left;
+				overflow-y:hidden;
+				overflow-x:hidden;
+			}
+
+			.block-stream td {
+				font-size: 150%;
+				/*border: 1px solid black;*/
+				border-collapse: collapse;
+				padding-bottom:5px;
+				padding-top:5px;
+				padding-left:2.5%;
+
+			}
+			.btn-danger{
+				width: 120px;
+				text-align: center;
+				background-color: #FFD95F;
+				color: #340160;
+				font-weight: bolder;
+				font-size: 15px;
+			}
+			.btn-danger:hover {
+				background-color: #340160;
+				color: white;
+			}
+			.block-stream tr{
+				padding: 40px;
+			}
+			td {
+				overflow-x:hidden;
+			}
+
+			tr td p {
+				font-size:14px !important;
+			}
+			/*#header {
+				text-align: center;
+				background-color:#43f2b6;
+				top:0;
+				width:100%;
+				-webkit-box-shadow: 0px 0px 4px 0px #000000;
+				-moz-box-shadow: 0px 0px 4px 0px #000000;
+				box-shadow: 0px 0px 4px 0px #000000;
+				color:white;
+				z-index:3333;
+				position:fixed;
+				left:0px;
+			}
+			#header * {
+					margin-right: 10px;
+				}
+			#header table {
+				width: 100%;
+			}
+
+			#header #cell-header {
+				width: 80%;
+				font-size: 50%;
+				color: white;
+			}
+
+			#header img {
+				width: 20px;
+			}
+
+			#header p {
+				margin-top: 2px;
+				color: black;
+			}*/
+			
+			.block-stream table {
+				width:100%;
+			}
+
+			.respectCell {
+				width:100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-body-page">
+			<div class="header-page">
+				<table>
+					<tr>
+						<td class="cell-header"><h1>Accomplishments</h1></td>
+						<td><a href="/" class="glyphicon glyphicon-log-out"></a></td>
+						<td><a href="/settings" class="glyphicon glyphicon-cog"></a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="container-content-main">
+				<div class="block-stream">
+					<table>
+						{{#each accomplishments}}
+						<tr>
+							<td><p>{{name}} completed a {{goal_type}}: "{{goal}}"</p></td>
+							<td class="respectCell">
+								<form method='post' action='/accomplishments' onsubmit='setTimeout(function () { window.location.reload(); }, 30)'>
+									<input type="hidden" name="id" value="{{id}}">
+								    <input class="btn btn-danger" type ="submit" name="respectValue" value="{{respectValue}}">
+								</form>
+							</td>
+						</tr>
+						{{/each}}
+					</table>
+				</div>
+			</div>
+
+			<div class="navbar">
+				<table id="navbar">
+					<tr>
+						<td><a href="/accomplishments"><button id="accomplishments-page" type="button" style="background-color:#FFD95F; border-top: 1px solid #FFD95F; border-left: 1px solid #FFD95F"><div id="accomplishmentsicon"><img src="images/icons2/accomplishments2p.png"></div></button></a></td>
+						<td><a href="/respects"><button id="respects-page" type="button" ><div id="respectsicon"><img src="images/icons2/respectg.png"></div></button></a></td>
+						<td><a href="/goals"><button id="goalList-page"><div id="goalsicon"><img src="images/icons2/goalsg.png"></div></button></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script src="js\jquery-1.11.0.js"></script>
+		<script src="js\bootstrap.js"></script>
+
+		<script type="text/javascript">
+			// $(".button-respect").click(toggle);
+			// function toggle(myVal, btId)
+			// {
+			// 	if (this.value=="Respect"){
+			// 		this.value = "Respect Given";
+			// 	}
+			// 	else {
+			// 		this.value = "Respect";
+			// 	}
+			// }
+		</script>
+
+		<script type="text/javascript">
+			var numRespects = $(".block-ltg").length - 1;
+			// console.log(numLTGs);
+		</script>
+
+		<!--<script>
+
+		// function passRespects(){
+		// 	var elementInput = "<<input type='hidden' name='id' value=" + (numRespects++) + "></form>"
+				
+
+		// 		if(this.value="Respect Given")
+		// 		{
+		// 			$(this).replaceWith(elementInput);
+
+		// 		}
+		// 				// Re-attach click listener;
+						
+		// 			}
+		// 		});
+		// 	}
+		</script>-->
+	</body>
+</html>

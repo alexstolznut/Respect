@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My Goals</title>
+		<!-- Import CSS -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,400' rel='stylesheet' type='text/css'>	
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,400' rel='stylesheet' type='text/css'>
+	
+
+		<style>
+			.block-ltg {
+				border: 5px solid green;
+				border-radius: 15px;
+				color: black;
+				width: 400px;
+				height: 100px;
+				font-size: 80%;
+				padding: 10px;
+				margin-left: 0px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				
+			}
+
+			.block-ltg:hover {
+				background-color: blue;
+				color: black;
+			}
+			.block-ltg h1 {
+				display:inline;
+				width: 400px;
+			}
+
+			.block-ltg:hover {
+				background-color: #444;
+				color: black
+			}
+			#allfriends{
+				display:inline;
+				margin-left: 400px;
+				width: 50px;
+				height: 50px;
+				float: top;
+
+			}
+
+			.add-friends {
+				border: 5px solid blue;
+				color: black;
+				background-color: transparent;
+				width: 250px;
+
+			}
+
+			.add-friends:hover {
+				background-color:#f8f8f8;
+				color: #222;
+
+				color: blue;
+			}
+			.hide-friends {
+				border: 5px solid blue;
+				color: black;
+				background-color: transparent;
+				width: 250px;
+
+			}
+
+			.hide-friends:hover {
+				background-color:#f8f8f8;
+				color: #222;
+
+				color: blue;
+			}
+			#allfriends{
+				margin-bottom: 0px;
+				display:inline;
+				margin-left: 400px;
+			}
+			.container1{
+				margin-top: 200px;
+				
+			}
+			#nofriends{
+				display: inline;
+				margin-left: 400px;
+				margin-top: 0px;
+				/*margin-bottom: 400px;*/
+				width: 50px;
+				height: 50px;
+			}
+			#showfriends{
+				height: 200px;
+				width: 400px;
+				font-size: 20px;
+				color: black;
+				clear:left;
+				clear:right;
+			}
+			#hidefriends{
+				height: 200px;
+				width: 400px;
+				font-size: 20px;
+				color: black;
+				margin-top: 50px;
+				/*display:inline;*/
+			}
+			.container-body-page{
+				margin-top: 50px;
+				margin-left: 200px;
+			}
+			.privacy-table-one{
+				margin-top: 50px;
+			}
+			.privacy-table-two{
+				margin-top: 100px;
+			}
+			.container-content-main{}
+
+
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container-body-page">
+			<div class="header-page">
+				<table>
+					<tr>
+						<td class="cell-header"><h1>Settings</h1></td>
+						<td><a href="/" class="glyphicon glyphicon-log-out"></a></td>
+						<td><a href="/settings" class="glyphicon glyphicon-cog"></a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="container-content-main">
+				<h1>Privacy</h1>
+				<!--<div class="container1">
+<div class = "block-ltg add-friends" id = "hidefriends">
+	<h4>All My FaceBook Friends Except...</h4>
+</div>
+	<input type="checkbox" class="theshit" id="allfriends" checked="checked" data-waschecked="false">
+</div>
+</div>-->
+<table class="privacy-table-one">
+	<tr class="container1">
+<td class = "block-ltg add-friends" id = "hidefriends">
+	<h4>All My Friends Except...</h4>
+</td>
+<td>
+	<input type="checkbox" class="checkboxone" id="allfriends" checked="" data-waschecked="false">
+</td>
+</table>
+		<div>
+				{{#each friends}}
+						<h3>{{firstname}}  {{lastname}}</h3>
+						
+				
+		</div>
+					<table class = "privacy-table-two">
+					<tr class="container2">
+
+	<td class="block-ltg hide-friends" id="showfriends">
+		<h4>No More Friends Except...</h4>
+
+	</td>
+	<td>
+		<input type="checkbox" id="nofriends" class="checkboxtwo" checked="" data-waschecked="false">
+</td>
+</tr>
+</table>
+
+					<div>
+						
+						<h3> {{nffirstname}} {{nflastname}}</h3>
+						{{/each}}
+					</div>
+
+
+					
+	
+</div>
+			<div class="navbar">
+				<table id="navbar">
+					<tr>
+						<td><a href="/accomplishments"><button id="accomplishments-page" type="button" style><div id="accomplishmentsicon"><img src="images/icons2/accomplishments2g.png"></div></button></a></td>
+						<td><a href="/respects"><button id="respects-page" type="button" ><div id="respectsicon"><img src="images/icons2/respectg.png"></div></button></a></td>
+						<td><a href="/goals"><button id="goalList-page"><div id="goalsicon"><img src="images/icons2/goalsg.png"></div></button></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="js\jquery-1.11.0.js"></script>
+		<script src="js\bootstrap.js"></script>
+		<script src="js\goals.js"></script>
+
+
+		<script>
+			$(".add-friends").click(toggleAddLTG);
+
+			function toggleAddLTG() {
+				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
+				var elementInput = "<form method='post' action='/settings' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
+				$(this).replaceWith(elementInput);
+
+				$('.input-goal-add').keydown(function (e) {
+					// Press "Esc" to exit
+					if(e.keyCode == 27) {
+						// Change to + Add Goal +
+						$(".input-goal-add").replaceWith("<div class='block-ltg add-friends'> <h4>All My Facebook Friends Except...</h4> </div>");
+						// Re-attach click listener;
+						$(".add-friends").click(toggleAddGoal);
+					}
+				});
+			}
+		</script>
+
+		<script>
+			$(".hide-friends").click(toggleAddLTG);
+
+			function toggleAddLTG() {
+				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
+				var elementInput = "<form method='post' action='/settings' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
+				$(this).replaceWith(elementInput);
+
+				$('.input-goal-add').keydown(function (e) {
+					// Press "Esc" to exit
+					if(e.keyCode == 27) {
+						// Change to + Add Goal +
+						$(".input-goal-add").replaceWith("<div class='block-ltg hide-friends'> <h4>No More Friends Except</h4> </div>");
+						// Re-attach click listener;
+						$(".hide-friends").click(toggleAddGoal);
+					}
+				});
+			}
+		</script>
+	</body>
+	<script language="javascript">
+	document.getElementById("allfriends").checked=true;
+	document.getElementById("allfriends").checked=false;
+	</script>
+	<script language="javascript">
+	document.getElementById("nofriends").checked=true;
+	document.getElementById("nofriends").checked=false;
+	</script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My Goals</title>
+		<!-- Import CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+
+		<style>
+			.block-ltg {
+				border: 5px solid black;
+				border-radius: 15px;
+				width: 80%;
+				font-size: 80%;
+				padding: 10px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.block-ltg:hover {
+				background-color: black;
+				color: white;
+			}
+			<style>
+		#header {
+			text-align: center;
+			background-color:#43f2b6;
+			top:0;
+			width:100%;
+			-webkit-box-shadow: 0px 0px 4px 0px #000000;
+			-moz-box-shadow: 0px 0px 4px 0px #000000;
+			box-shadow: 0px 0px 4px 0px #000000;
+			color:white;
+			z-index:3333;
+			position:fixed;
+			left:0px;
+		}
+		#header * {
+				margin-right: 10px;
+			}
+			#header table {
+				width: 100%;
+			}
+
+			#header #cell-header {
+				width: 80%;
+				font-size: 50%;
+				color: white;
+				f
+			}
+
+			#header img {
+				width: 20px;
+			}
+
+			#header p {
+				margin-top: 2px;
+				color: black;
+			}
+	</style>
+		</style>
+	</head>
+
+	<body>
+		<div class="container-body-page">
+			<div class="header-page">
+				<table>
+					<tr>
+						<td class="cell-header"><h1>MANAGE</h1></td>
+						<td><a href="/"><p>Logout</p></a></td>
+						<td><a href="settings"><img class="icon-settings" src="images/settings.png" alt="settings"></a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="container-content-main">
+				{{#each ltg}}
+				<div class="block-ltg">
+					<h3>{{goal}}</h3>
+				</div>
+				{{/each}}
+			</div>
+
+			<div class="navbar">
+				<table id="navbar">
+					<tr>
+						<td><a href="/accomplishments"><button id="accomplishments-page" type="button" class='btn btn-info' style>ACCOMPLISHMENTS</button></a></td>
+						<td><a href="/respects"><button id="respects-page" type="button" class='btn btn-info'>RESPECTS</button></a></td>
+						<td><a href="/goals"><button id="goalList" class = 'btn btn-info'>GOALS</button></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script src="js\jquery-1.11.0.js"></script>
+	</body>
+</html>

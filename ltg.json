@@ -1,0 +1,34 @@
+{
+	"ltg": [
+		{
+			"id": "sdfu823ksd",
+			"goal": "Reduce weight to 160 pounds"			
+		},
+		{
+			"id": "3dfjkoe3m1",
+			"goal": "Sleep 8 hours per day"
+		},
+		{
+			"id": "3jodsc2vf3",
+			"goal": "Find a summer internship in Computer Science web development"
+		}
+	],
+	"wgs": [
+	{
+		"id": "sdfu823ksd",
+		"wid":"1qscft6yjm",
+		"description": "Run A Total Of A Mile"
+		},
+		{
+			"id": "3dfjkoe3m1",
+			"wid": "0ihvdw1",
+			"description": "Go To Bed By Ten"
+
+			}, 
+			{
+				"id": "3jodsc2vf3",
+				"wid": "2efbji0",
+				"description": "Search Port Triton"
+				}
+	]
+}
