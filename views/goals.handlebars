@@ -211,7 +211,7 @@
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
 				
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
+				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Eg. Get three As in CSE classes by Spring 2016'><input type='submit'><br><button>Cancel</button></form>"
 				$(this).replaceWith(elementInput);
 
 				$('.input-goal-add').keydown(function (e) {
@@ -231,7 +231,7 @@
 			function toggleAddWGS() {
 				console.log(this.id);
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='input-goal-add' name='wg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'><input  name=id type='hidden' maxlength='50' placeholder='Press Enter to Save, Esc to Exit' value=" + this.id + "></form>";
+				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='input-goal-add' name='wg' type='text' maxlength='80' placeholder='Eg. Study Lecture Notes for 10 hours by the end of Week 9'><input  name=id type='hidden' maxlength='50' value=" + this.id + "></form>";
 				$(this).replaceWith(elementInput);
 
 				$('.input-goal-add').keydown(function (e) {
