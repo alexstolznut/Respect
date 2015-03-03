@@ -197,9 +197,9 @@
 		</script>
 		<script>
 		$(".goals-complete").click(confirmation);
-		function ()
+		function confirmation ()
 		{
-			<h3 class="wg-complete-{{isComplete}}">{{description}} [Complete]</h3>
+			// <h3 class="wg-complete-{{isComplete}}">{{description}} [Complete]</h3>
 			
 		}
 		</script>
@@ -211,18 +211,16 @@
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
 				
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Eg. Get three As in CSE classes by Spring 2016'><input type='submit'><br><button>Cancel</button></form>"
+				var elementInput = "<form id='form-ltg' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Eg. Get three As in CSE classes by Spring 2016'><input type='submit'><br><input class='cancel-LTG' type='button' value='Cancel'></form>"
 				$(this).replaceWith(elementInput);
+				$(".cancel-LTG").click(cancelInputLTG);
+			}
 
-				$('.input-goal-add').keydown(function (e) {
-					// Press "Esc" to exit
-					if(e.keyCode == 27) {
-						// Change to + Add Goal +
-						$(".input-goal-add").replaceWith("<div class='block-ltg div-goal-add'> <h1>+ Add Long Term Goal +</h1> </div>");
-						// Re-attach click listener;
-						$(".div-goal-add").click(toggleAddLTG);
-					}
-				});
+			function cancelInputLTG() {
+				// Change to + Add Goal +
+				$('#form-ltg').replaceWith("<div class='block-ltg div-goal-add'> <h1>+ Add Long Term Goal +</h1> </div>");
+				// Re-attach click listener;
+				$(".div-goal-add").click(toggleAddLTG);
 			}
 		</script>
 		<script>
@@ -231,18 +229,16 @@
 			function toggleAddWGS() {
 				console.log(this.id);
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='input-goal-add' name='wg' type='text' maxlength='80' placeholder='Eg. Study Lecture Notes for 10 hours by the end of Week 9'><input  name=id type='hidden' maxlength='50' value=" + this.id + "></form>";
+				var elementInput = "<form id='form-wg' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='input-goal-add' name='wg' type='text' maxlength='80' placeholder='Eg. Study Lecture Notes for 10 hours by the end of Week 9'><input  name=id type='hidden' maxlength='50' value=" + this.id + "><input type='submit'><br><input class='cancel-WG' type='button' value='Cancel'></form>";
 				$(this).replaceWith(elementInput);
+				$(".cancel-WG").click(cancelInputWG);
+			}
 
-				$('.input-goal-add').keydown(function (e) {
-					// Press "Esc" to exit
-					if(e.keyCode == 27) {
-						// Change to + Add Goal +
-						$(".input-goal-add").replaceWith("<button class='button-add-wgs' id=" + this.id + ">+ Add Weekly Goal +</button>");
-						// Re-attach click listener;
-						$(".button-add-wgs").click(toggleAddWGS);
-					}
-				});
+			function cancelInputWG() {
+				// Change to + Add Goal +
+				$('#form-wg').replaceWith("<button class='button-add-wgs' id=" + this.id + ">+ Add Weekly Goal +</button>");
+				// Re-attach click listener;
+				$(".button-add-wgs").click(toggleAddWGS);
 			}
 		</script>
 	</body>
