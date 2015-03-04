@@ -11,14 +11,14 @@ $(document).ready(function() {
 function initializePage() {
 	// add any functionality and listeners you want here
 
-  $(".version_a").click(function(){
+  $(".block-ltg div-goal-add-a").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("div-goal-add-a");
+    woopra.track("ltg_a_clicked");
   })
 
-  $(".version_b").click(function(){
+  $(".block-ltg div-goal-add-b").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("div-goal-add-b")
+    woopra.track("ltg_b_clicked")
   })
 
 }
