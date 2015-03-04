@@ -13,12 +13,12 @@ function initializePage() {
 
   $(".version_a").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("block-ltg div-goal-add-a");
+    woopra.track("div-goal-add-a");
   })
 
   $(".version_b").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("block-ltg div-goal-add-b")
+    woopra.track("div-goal-add-b")
   })
 
 }
