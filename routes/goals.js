@@ -4,8 +4,8 @@ exports.view = function(req, res){
 	var random_num = Math.random();
 
   if(random_num > 0.5){
-    res.render("goals", goals);
+    res.json("goals", goals);
   }else{
-    res.render("goals_alternate", goals)
+    res.json("goals_alternate", goals)
   }
 };
