@@ -197,14 +197,14 @@
 			// console.log(numLTGs);
 		</script>
 		<script>
-		$(".goals-complete").click(confirmation);
-		function ()
-		{
-			<h3 class="wg-complete-{{isComplete}}">{{description}} [Complete]</h3>
+		// $(".goals-complete").click(confirmation);
+		// function ()
+		// {
+		// 	<h3 class="wg-complete-{{isComplete}}">{{description}} [Complete]</h3>
 			
-		}
+		// }
 		</script>
-
+		<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
 		<script>
 			$(".div-goal-add").click(toggleAddLTG);
 
@@ -212,7 +212,7 @@
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
 				
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
+				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { callThis(); window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input id='input-ltg' class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
 				$(this).replaceWith(elementInput);
 
 				$('.input-goal-add').keydown(function (e) {
@@ -224,6 +224,16 @@
 						$(".div-goal-add").click(toggleAddLTG);
 					}
 				});
+			}
+
+			function callThis() {
+				Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
+				var LTG = Parse.Object.extend("LTG");
+				var ltg = new LTG;
+				ltg.set("user", "test");
+				ltg.set("goal", $("#input-ltg")[0].value);
+				ltg.save();
+				// alert("Goal Added!");
 			}
 		</script>
 		<script>
