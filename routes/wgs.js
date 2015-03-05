@@ -1,5 +1,5 @@
 var wgs = require('../wgs.json');
 
 exports.view = function(req, res){
-	res.json('description', wgs);
+	res.render('description', wgs);
 };
