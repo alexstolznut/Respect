@@ -133,7 +133,7 @@
 					<div class="block-ltg ltg-complete-{{isComplete}}" data-toggle="collapse" data-target="#{{id}}">
 						<p class="glyphicon glyphicon-collapse-down"></p>
 						<!-- Timeout shorter to reload before div collapse -->
-						<form class="goals-delete" method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 30)'>
+						<form class="goals-delete" method='post' action='/goals'>
 							<input type="hidden" name="deleteLTG" value="true">
 							<button name="id" value="{{id}}" onclick="return confirm('Do you want to delete this goal?')">X</button>
 						</form>
@@ -211,7 +211,7 @@
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
 				
-				var elementInput = "<form id='form-ltg' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Eg. Get three As in CSE classes by Spring 2016'><input type='submit'><br><input class='cancel-LTG' type='button' value='Cancel'></form>"
+				var elementInput = "<form id='form-ltg' method='post' action='/goals' ><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Eg. Get three As in CSE classes by Spring 2016'><input type='submit'><br><input class='cancel-LTG' type='button' value='Cancel'></form>"
 				$(this).replaceWith(elementInput);
 				$(".cancel-LTG").click(cancelInputLTG);
 			}
@@ -229,7 +229,7 @@
 			function toggleAddWGS() {
 				console.log(this.id);
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
-				var elementInput = "<form id='form-wg' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input class='input-goal-add' name='wg' type='text' maxlength='80' placeholder='Eg. Study Lecture Notes for 10 hours by the end of Week 9'><input  name=id type='hidden' maxlength='50' value=" + this.id + "><input type='submit'><br><input class='cancel-WG' type='button' value='Cancel'></form>";
+				var elementInput = "<form id='form-wg' method='post' action='/goals' ><input class='input-goal-add' name='wg' type='text' maxlength='80' placeholder='Eg. Study Lecture Notes for 10 hours by the end of Week 9'><input  name=id type='hidden' maxlength='50' value=" + this.id + "><input type='submit'><br><input class='cancel-WG' type='button' value='Cancel'></form>";
 				$(this).replaceWith(elementInput);
 				$(".cancel-WG").click(cancelInputWG);
 			}
