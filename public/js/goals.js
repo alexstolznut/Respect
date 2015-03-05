@@ -20,5 +20,4 @@ function initializePage() {
     //add your Woopra tracking code for version A's like button click event
      woopra.call("trackForm", "ltg-version-b", "form-ltg-alt");
   })
-
 }

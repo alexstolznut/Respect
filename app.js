@@ -84,7 +84,10 @@ app.post("/respectstream", function(req, res){
 	// else if()
 })
 app.get('/goals', goals.view);
+app.get('/goals/data', goals.getJSON);
+app.get('/goals/:id', goals.getObj);
 app.post("/goals", function(req, res) {
+	console.log("/goals/" + req.body.id);
 	if (req.body.ltg != null) {
 		// console.log("id: " + req.body.id);
 		goalsJSON['ltg'].push({
