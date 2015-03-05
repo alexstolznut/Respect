@@ -13,12 +13,12 @@ function initializePage() {
 
   $(".ltg-version-a").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("ltg_a_clicked");
+   woopra.call("trackForm", "ltg-version-a", "form-ltg-orig");
   })
 
   $(".ltg-version-b").click(function(){
     //add your Woopra tracking code for version A's like button click event
-    woopra.track("ltg_b_clicked")
+     woopra.call("trackForm", "ltg-version-b", "form-ltg-alt");
   })
 
 }

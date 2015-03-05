@@ -171,7 +171,7 @@
 				
 
 				<div class="block-ltg div-goal-add-a">
-					<h1 type = "button" class="ltg-version-a">+ Add Long Term Goal +</h1>
+					<h1>+ Add Long Term Goal +</h1>
 				</div>
 				
 				</div>
@@ -213,7 +213,7 @@
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
 				
-				var elementInput = "<form id='form-ltg' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Press Enter to Submit'><input type='submit'><br><input class='cancel-LTG' type='button' value='Cancel'></form>"
+				var elementInput = "<form id='form-ltg-orig' method='post' action='/goals' onsubmit='setTimeout(function () { window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input class='block-ltg input-goal-add' name='ltg' type='text' maxlength='80' placeholder='Press Enter to Submit'><input class='ltg-version-a' type='submit'><br><input class='cancel-LTG' type='button' value='Cancel'></form>"
 				$(this).replaceWith(elementInput);
 				$(".cancel-LTG").click(cancelInputLTG);
 			}
