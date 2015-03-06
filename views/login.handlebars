@@ -36,8 +36,14 @@
 
 	<body>
 
-
-
+	<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+		<script>
+			Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
+			// console.log(Parse.User.current());
+			if(Parse.User.current() != null)
+				Parse.User.logOut();
+			// console.log(Parse.User.current());
+		</script>
 
 	<div id="logincontainer">
 			<section class="content">

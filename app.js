@@ -47,8 +47,53 @@ var accompJSON = require('./accomplishments.json');
 
 // Add routes here
 // Main pages
-app.get('/', index.view);
-app.get('/accomplishments', accomplishments.view);
+// app.get('/', index.view);
+app.get('/', function(req, res) {
+	accompJSON = {
+			"accomplishments": [
+				{
+					"id": "0",
+					"name": "Akshat Vasavada",
+					"goal_type": "LONG-TERM GOAL",
+					"goal": "Finish Scandal series with girlfriend.",
+					"respectValue": "RESPECT"		
+				},
+				{
+					"id": "1",
+					"name": "Alex Stolzoff",
+					"goal_type": "Weekly Goal",
+					"goal": "Complete login page for COGS 120",
+					"respectValue": "RESPECT"
+				},
+				{
+					"id": "2",
+					"name": "Alex Stolzoff",
+					"goal_type": "Weekly Goal",
+					"goal": "Complete login page for COGS 120",
+					"respectValue": "RESPECT"
+				},
+				{
+					"id": "3",
+					"name": "Akshat Vasavada",
+					"goal_type": "Weekly Goal",
+					"goal": "Run for a minute.",
+					"respectValue": "RESPECT"
+				}
+			]
+		}
+
+	goalsJSON = {
+			"ltg": []
+		};
+
+	console.log(goalsJSON);
+	res.render("login");
+});
+
+app.get('/accomplishments', function(req, res) {
+	res.render("accomplishments", accompJSON);
+});
+
 app.post("/accomplishments", function(req, res) {
 	// console.log(req.body.id);
 	for(var i = 0; i < accompJSON['accomplishments'].length; i++) {
@@ -82,11 +127,15 @@ app.post("/respectstream", function(req, res){
 	}
 
 	// else if()
-})
-app.get('/goals', goals.view);
+});
+
+app.get('/goals', function(req, res) {
+	res.render("goals", goalsJSON);
+});
+
 app.post("/goals", function(req, res) {
 	if (req.body.ltg != null) {
-		// console.log("id: " + req.body.id);
+		console.log("id: " + req.body.id);
 		goalsJSON['ltg'].push({
 			"id": req.body.id,
 			"goal": req.body.ltg,
