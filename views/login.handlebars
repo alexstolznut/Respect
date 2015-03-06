@@ -26,6 +26,12 @@
 
 	}
 
+	#enter {
+		margin-left: 10px;
+		border: 1px solid black;
+		border-radius: 10px;
+		background-color: #FFD95F
+	}
 	</style>
 
 	<body>
@@ -37,13 +43,15 @@
 			<section class="content">
 				<h2 id="logintitle">GoalPeer Login</h2>
 				<span class="input input--jiro">
-					<input class="input__field input__field--jiro" type="text" id="input-10" />
-					<label class="input__label input__label--jiro" for="input-10">
-						<span class="input__label-content input__label-content--jiro">E-mail</span>
-					</label>
+					<!-- <form> -->
+						<input class="input__field input__field--jiro" type="text" id="input-10" />
+						<label class="input__label input__label--jiro" for="input-10">
+							<span class="input__label-content input__label-content--jiro">email</span>
+						</label>
+					<!-- </form> -->
 				</span>
-
 			</section>
+			<button id="enter" onclick="callThis()">Enter</button>
 
 	</div>		
 
@@ -53,7 +61,32 @@
 
 		<script src="js\jquery-1.11.0.js"></script>
 		<script src="js\bootstrap.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
 		<script>
+			function callThis() {
+					// evt.preventDefault()
+					Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
+					var user = new Parse.User();
+					user.set("username", $(".input__field")[0].value);
+					user.set("password", "password");
+					user.set("email", $(".input__field")[0].value);
+					user.signUp(null, {
+						success: function(user) {
+						    window.location.assign("/accomplishments");
+						 },
+						 error: function(error) {
+						 	Parse.User.logIn($(".input__field")[0].value, "password", {
+							  success: function(user) {
+							    window.location.assign("/accomplishments");
+							  },
+							  error: function(user, error) {
+							    // The login failed. Check error to see why.
+							  }
+							});
+						 }
+					});
+			}
+
 			(function() {
 				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 				if (!String.prototype.trim) {
@@ -69,7 +102,7 @@
 				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
 					// in case the input is already filled..
 					if( inputEl.value.trim() !== '' ) {
-						classie.add( inputEl.parentNode, 'input--filled' );
+						// classie.add( inputEl.parentNode, 'input--filled' );
 					}
 
 					// events:
@@ -78,12 +111,12 @@
 				} );
 
 				function onInputFocus( ev ) {
-					classie.add( ev.target.parentNode, 'input--filled' );
+					// classie.add( ev.target.parentNode, 'input--filled' );
 				}
 
 				function onInputBlur( ev ) {
 					if( ev.target.value.trim() === '' ) {
-						classie.remove( ev.target.parentNode, 'input--filled' );
+						// classie.remove( ev.target.parentNode, 'input--filled' );
 					}
 				}
 			})();
