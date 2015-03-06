@@ -214,6 +214,7 @@
 				
 				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { callThis(); window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input id='input-ltg' class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Press Enter to Save, Esc to Exit'></form>"
 				$(this).replaceWith(elementInput);
+					Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
 
 				$('.input-goal-add').keydown(function (e) {
 					// Press "Esc" to exit
@@ -230,7 +231,7 @@
 				Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
 				var LTG = Parse.Object.extend("LTG");
 				var ltg = new LTG;
-				ltg.set("user", "test");
+				ltg.set("user", Parse.User.current().get("username"));
 				ltg.set("goal", $("#input-ltg")[0].value);
 				ltg.save();
 				// alert("Goal Added!");
