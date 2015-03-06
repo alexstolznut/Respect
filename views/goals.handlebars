@@ -231,7 +231,7 @@
 			function callThis() {
 				Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
 				var LTG = Parse.Object.extend("LTG");
-				var ltg = new LTG;
+				var ltg = new LTG();
 				ltg.set("user", Parse.User.current().get("username"));
 				ltg.set("goal", $("#input-ltg")[0].value);
 				ltg.set("type", "A")
