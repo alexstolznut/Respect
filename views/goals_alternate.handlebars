@@ -212,8 +212,8 @@
 
 			function toggleAddLTG() {
 				// Change to Input (NO NEWLINES ALLOWED [will throw syntax error!])
-				
-				var elementInput = "<form method='post' action='/goals' onsubmit='setTimeout(function () { callThis(); window.location.reload(); }, 1000)'><input type='hidden' name='id' value=" + (numLTGs++) + "><input id='input-ltg' class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Eg. Get three As in CSE classes by Spring 2016'></form>"
+				// setTimeout(function () { callThis(); window.location.reload(); }, 1000)
+				var elementInput = "<form method='post' action='/goals' onsubmit='callThis()'><input type='hidden' name='id' value=" + (numLTGs++) + "><input id='input-ltg' class='block-ltg input-goal-add' name='ltg' type='text' maxlength='50' placeholder='Eg. Get three As in CSE classes by Spring 2016'></form>"
 				$(this).replaceWith(elementInput);
 					Parse.initialize("ufYHrf2JuFW0nIXLncPeGeDdAXZa8BBZsZsyLEK5", "yJuhUErH2y33emEp9Ex63We8dstrRybbBraZyFt3");
 
@@ -235,9 +235,11 @@
 				ltg.set("user", Parse.User.current().get("username"));
 				ltg.set("goal", $("#input-ltg")[0].value);
 				ltg.set("type", "B")
-				ltg.save();
-				// alert("Goal Added!");
-			}
+				ltg.save(null, {
+				  	success: function(ltg) {
+				    	window.location.reload();
+				  	},);
+				}
 		</script>
 		<script>
 			$(".button-add-wgs").click(toggleAddWGS);
