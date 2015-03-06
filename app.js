@@ -104,6 +104,7 @@ app.post("/accomplishments", function(req, res) {
 		}
 	}
 });
+
 app.get('/respects', respects.view);
 app.post("/respectstream", function(req, res){
 	var respectstreamJSON = require('./respectstream.json');
@@ -118,12 +119,16 @@ app.post("/respectstream", function(req, res){
 
 		})
 	}
-
-	// else if()
 });
 
 app.get('/goals', function(req, res) {
-	res.render("goals", goalsJSON);
+	var random_num = Math.random();
+
+	if(random_num > 0.5){
+	  res.render("goals", goalsJSON);
+	}else{
+	  res.render("goals_alternate", goalsJSON)
+	}
 });
 
 app.post("/goals", function(req, res) {
