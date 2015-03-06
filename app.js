@@ -49,35 +49,35 @@ var accompJSON = require('./accomplishments.json');
 // Main pages
 // app.get('/', index.view);
 app.get('/', function(req, res) {
-	accompJSON = {
-		"accomplishments": [
-			{
-				"id": "0",
-				"name": "Akshat Vasavada",
-				"goal_type": "LONG-TERM GOAL",
-				"goal": "Apply to 3 companies before Spring 2015",
-				"respectValue": "RESPECT"		
-			},
-			{
-				"id": "1",
-				"name": "Alex Stolzoff",
-				"goal_type": "Weekly Goal",
-				"goal": "Complete login page for COGS 120",
-				"respectValue": "RESPECT"
-			},
-			{
-				"id": "2",
-				"name": "Akshat Vasavada",
-				"goal_type": "Weekly Goal",
-				"goal": "Run for a minute.",
-				"respectValue": "RESPECT"
-			}
-		]
-	}
+	// accompJSON = {
+	// 	"accomplishments": [
+	// 		{
+	// 			"id": "0",
+	// 			"name": "Akshat Vasavada",
+	// 			"goal_type": "LONG-TERM GOAL",
+	// 			"goal": "Apply to 3 companies before Spring 2015",
+	// 			"respectValue": "RESPECT"		
+	// 		},
+	// 		{
+	// 			"id": "1",
+	// 			"name": "Alex Stolzoff",
+	// 			"goal_type": "Weekly Goal",
+	// 			"goal": "Complete login page for COGS 120",
+	// 			"respectValue": "RESPECT"
+	// 		},
+	// 		{
+	// 			"id": "2",
+	// 			"name": "Akshat Vasavada",
+	// 			"goal_type": "Weekly Goal",
+	// 			"goal": "Run for a minute.",
+	// 			"respectValue": "RESPECT"
+	// 		}
+	// 	]
+	// }
 
-	goalsJSON = {
-			"ltg": []
-		};
+	// goalsJSON = {
+	// 		"ltg": []
+	// 	};
 
 	console.log(goalsJSON);
 	res.render("login");
