@@ -234,6 +234,7 @@
 				var ltg = new LTG;
 				ltg.set("user", Parse.User.current().get("username"));
 				ltg.set("goal", $("#input-ltg")[0].value);
+				ltg.set("type", "B")
 				ltg.save();
 				// alert("Goal Added!");
 			}
