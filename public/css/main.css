@@ -101,7 +101,7 @@ body {
 .respecticon {
 	background-color: #eef3f6;
 	float:left;
-	height:100%;
+	height:2em;
 	margin-right:10px;
 
 }
@@ -273,6 +273,9 @@ width: 100%;
 			.glyphicon-collapse-down {
 				float: left;
 				font-size: 40px;
+				margin-top:10px;
+				margin-left:5px;
+				   		font-size: 0.8em;
 			}
 
 @media screen and (max-width: 750px) {
@@ -289,8 +292,12 @@ width: 100%;
    		display:block;
    } 
    .glyphicon-collapse-down {
-   		font-size: 0.8em;
+
    }
+   .container-content-main {
+	margin-top: 35px;
+
+}
 
 
 }
