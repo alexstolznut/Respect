@@ -132,7 +132,7 @@ body {
 }
 
 #goaldiv {
-	width:80%;
+	width:90%;
 	margin:auto;
 }
 
@@ -168,3 +168,129 @@ width: 100%;
 	width:40px;
 	margin:auto;
 }
+
+
+/*GOALSPAGE CSS*/
+			.block-ltg {
+				/*border: 2px solid #3E116D;*/
+				/*border-radius: 15px;*/
+				font-size: 1.8em;
+				padding: 10px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				text-align:center;
+				background-color:white;
+			}
+			.block-ltg h1 {
+				display:inline;
+				font-size:1em;
+			}
+			.block-ltg:hover {
+				background-color: #3E116D;
+				color: white;
+			}
+			.ltg-complete-true {
+				background-color:#70E5A0;
+			}
+			.ltg-complete-true:hover {
+				background-color: #70E5A0;
+			}
+			.wg-complete-true {
+				color:green;
+			}
+			.goals-delete, .goals-complete {
+				display:inline;
+				float:right;
+			}
+			.goals-delete button {
+				background-color: #CC5552;
+				border:none;
+				margin-left:5px;
+			}
+			.goals-complete button {
+				background-color: #70E5A0;
+				border:none;
+			}
+			.div-goal-add {
+				border: 2px solid #3E116D;
+				color: #f8f8f8;
+				background-color:#3E116D;
+			}
+			.div-goal-add:hover {
+				background-color:#f8f8f8;
+				color: #3E116D;
+				/*color: black;*/
+			}
+			.input-goal-add, .input-goal-add:hover {
+				background-color: white;
+				color: #3E116D;
+			}
+			.input-goal-add {
+				font-size: 20px;
+				font-weight: bold;
+				width:100%;
+			}
+			.button-add-wgs {
+				display:inline;
+				margin-top:10px;
+				margin-left:auto !important;
+				margin-right:auto !important;
+				border:none;
+			}
+			#header {
+				text-align: center;
+				background-color:#43f2b6;
+				top:0;
+				width:100%;
+				-webkit-box-shadow: 0px 0px 4px 0px #000000;
+				-moz-box-shadow: 0px 0px 4px 0px #000000;
+				box-shadow: 0px 0px 4px 0px #000000;
+				color:white;
+				z-index:3333;
+				position:fixed;
+				left:0px;
+			}
+			#header * {
+				margin-right: 10px;
+			}
+			#header table {
+				width: 100%;
+			}
+			#header #cell-header {
+				width: 80%;
+				font-size: 50%;
+				color: white;
+			}
+			#header img {
+				width: 20px;
+			}
+			#header p {
+				margin-top: 2px;
+				color: black;
+			}
+
+			.glyphicon-collapse-down {
+				float: left;
+				font-size: 40px;
+			}
+
+@media screen and (max-width: 750px) {
+	#goaldiv { 
+		width:100%;
+			        
+   }
+
+   .block-ltg {
+   		padding:5px;
+   }
+   .block-ltg h1 {
+   		font-size: 0.8em;
+   		display:block;
+   } 
+   .glyphicon-collapse-down {
+   		font-size: 0.8em;
+   }
+
+
+}
+
