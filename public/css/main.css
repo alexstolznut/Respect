@@ -44,7 +44,7 @@ body {
 }
 
 .container-content-main {
-	margin-top: 55px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	overflow-y:hidden;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .respecticon {
-	background-color: #eef3f6;
+	background-color: white;
 	float:left;
 	height:2em;
 	margin-right:10px;
@@ -107,7 +107,7 @@ body {
 }
 
 .respectentry-top {
-	background-color: #eef3f6;
+	background-color: white;
 	display:inline;
 	float:right;
 	margin-left:5px;
@@ -116,7 +116,7 @@ body {
 }
 
 .respectentry-bottom {
-	background-color: #eef3f6;
+	background-color: white;
 	display:inline;
 	top:50%;
 
