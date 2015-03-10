@@ -50,8 +50,8 @@
 				display:inline;
 			}
 
-			.container-body.page{
-				margin-top:55px;
+			.container-content-main{
+				margin-top:55px !important;
 			}
 
 	</style>
@@ -74,14 +74,14 @@
 
 			{{#each respectstream}}
 			<div class="respectentry-container"> 
-				<div class="respecticon">
+				<!--<div class="respecticon">
 					Respect
-				</div>
+				</div>-->
 				<div class="respectentry-top">
 					16h
 				</div>
 				<div class="respectentry-bottom">
-					You got a respect for: {{description}}
+					You got a respect for: <span class="description"> {{description}} </span>
 				</div>
 
 
