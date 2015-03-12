@@ -2,8 +2,12 @@
 	"respectstream": [
 		{
 			"wid": "3jf93j84j9",
-			"description": "Ran 3 miles"		
+			"description": "Learn how to rap"		
 		},
+		{
+			"wid": "3jf93j84j9",
+			"description": "Ran 3 miles"		
+		},				
 		{
 			"wid": "jf83jt94u5",
 			"description": "Actually did my reading"		
@@ -23,43 +27,7 @@
 		{
 			"wid": "mg94h03j04",
 			"description": "Wrecked my stats midterm"		
-		},
-		{
-			"wid": "jf83jt94u5",
-			"description": "Actually did my reading"		
-		},
-		{
-			"wid": "jg9484h602",
-			"description": "Aced my 20C midterm"		
-		},
-		{
-			"wid": "mg84jg9384",
-			"description": "Baked Vineet a cake"		
-		},
-		{
-			"wid": "jf9384h49j",
-			"description": "Applied for a Junior Designer position at Ninthlink"		
-		},
-		{
-			"wid": "3jf93j84j9",
-			"description": "Ran 3 miles"		
-		},
-		{
-			"wid": "jf83jt94u5",
-			"description": "Actually did my reading"		
-		},
-		{
-			"wid": "jg9484h602",
-			"description": "Aced my 20C midterm"		
-		},
-		{
-			"wid": "mg84jg9384",
-			"description": "Baked Vineet a cake"		
-		},
-		{
-			"wid": "jf9384h49j",
-			"description": "Applied for a Junior Designer position at Ninthlink"		
-		}				
+		}		
 
 		]
 }
