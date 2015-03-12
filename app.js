@@ -122,13 +122,7 @@ app.post("/respectstream", function(req, res){
 });
 
 app.get('/goals', function(req, res) {
-	var random_num = Math.random();
-
-	if(random_num > 0.5){
-	  res.render("goals", goalsJSON);
-	}else{
-	  res.render("goals_alternate", goalsJSON)
-	}
+	res.render("goals", goalsJSON);
 });
 
 app.post("/goals", function(req, res) {
