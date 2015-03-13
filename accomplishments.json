@@ -20,6 +20,14 @@
 			"goal_type": "Weekly Goal",
 			"goal": "Run for a minute.",
 			"respectValue": "RESPECT"
+		},
+		{
+			"id":"3",
+			"name": "Anna Hernandez",
+			"goal_type": "Weekly Goal",
+			"goal": "Ace COGS 107B Final",
+			"respectValue": "RESPECT"
+
 		}
 	]
 }
